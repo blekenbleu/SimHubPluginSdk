@@ -39,10 +39,6 @@
       <StartAction>Program</StartAction>
       <StartProgram>..\..\SimHubWPF.exe</StartProgram>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-      <StartAction>Program</StartAction>
-      <StartProgram>..\..\SimHubWPF.exe</StartProgram>
-    </PropertyGroup>
   <ItemGroup>
     <Reference Include="GameReaderCommon">
       <HintPath>..\..\GameReaderCommon.dll</HintPath>
