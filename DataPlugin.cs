@@ -3,14 +3,14 @@ using SimHub.Plugins;
 using System;
 using System.Windows.Media;
 
-namespace User.PluginSdkDemo
+namespace User.PluginSdk
 {
     [PluginDescription("My plugin description")]
     [PluginAuthor("Author")]
     [PluginName("Demo plugin")]
-    public class DataPluginDemo : IPlugin, IDataPlugin, IWPFSettingsV2
+    public class DataPlugin : IPlugin, IDataPlugin, IWPFSettingsV2
     {
-        public DataPluginDemoSettings Settings;
+        public DataPluginSettings Settings;
 
         /// <summary>
         /// Instance of the current plugin manager
@@ -70,7 +70,7 @@ namespace User.PluginSdkDemo
         /// <returns></returns>
         public System.Windows.Controls.Control GetWPFSettingsControl(PluginManager pluginManager)
         {
-            return new SettingsControlDemo(this);
+            return new SettingsControl(this);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace User.PluginSdkDemo
             SimHub.Logging.Current.Info("Starting plugin");
 
             // Load settings
-            Settings = this.ReadCommonSettings<DataPluginDemoSettings>("GeneralSettings", () => new DataPluginDemoSettings());
+            Settings = this.ReadCommonSettings<DataPluginSettings>("GeneralSettings", () => new DataPluginSettings());
 
             // Declare a property available in the property list, this gets evaluated "on demand" (when shown or used in formulas)
             this.AttachDelegate("CurrentDateTime", () => DateTime.Now);
