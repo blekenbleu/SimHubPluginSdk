@@ -5,9 +5,9 @@ using System.Windows.Media;
 
 namespace User.PluginSdk
 {
-    [PluginDescription("My plugin description")]
+    [PluginDescription("Device Extension Demo")]
     [PluginAuthor("Author")]
-    [PluginName("Demo plugin")]
+    [PluginName("DevExtDemo plugin")]
     public class DataPlugin : IPlugin, IDataPlugin, IWPFSettingsV2
     {
         public DataPluginSettings Settings;
@@ -25,7 +25,7 @@ namespace User.PluginSdk
         /// <summary>
         /// Gets a short plugin title to show in left menu. Return null if you want to use the title as defined in PluginName attribute.
         /// </summary>
-        public string LeftMenuTitle => "Demo plugin";
+        public string LeftMenuTitle => "DevExtDemo plugin";
 
         /// <summary>
         /// Called one time per game data update, contains all normalized game data,
