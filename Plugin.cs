@@ -3,14 +3,14 @@ using SimHub.Plugins;
 using System;
 using System.Windows.Media;
 
-namespace User.PluginSdk
+namespace Sdk.Plugin
 {
-    [PluginDescription("Device Extension Demo")]
+    [PluginDescription("My plugin description")]
     [PluginAuthor("Author")]
-    [PluginName("DevExtDemo plugin")]
-    public class DataPlugin : IPlugin, IDataPlugin, IWPFSettingsV2
+    [PluginName("SDK plugin")]
+    public class Plugin : IPlugin, IDataPlugin, IWPFSettingsV2
     {
-        public DataPluginSettings Settings;
+        public Settings Settings;
 
         /// <summary>
         /// Instance of the current plugin manager
@@ -25,7 +25,7 @@ namespace User.PluginSdk
         /// <summary>
         /// Gets a short plugin title to show in left menu. Return null if you want to use the title as defined in PluginName attribute.
         /// </summary>
-        public string LeftMenuTitle => "DevExtDemo plugin";
+        public string LeftMenuTitle => "Demo plugin";
 
         /// <summary>
         /// Called one time per game data update, contains all normalized game data,
@@ -70,7 +70,7 @@ namespace User.PluginSdk
         /// <returns></returns>
         public System.Windows.Controls.Control GetWPFSettingsControl(PluginManager pluginManager)
         {
-            return new SettingsControl(this);
+            return new Control(this);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace User.PluginSdk
             SimHub.Logging.Current.Info("Starting plugin");
 
             // Load settings
-            Settings = this.ReadCommonSettings<DataPluginSettings>("GeneralSettings", () => new DataPluginSettings());
+            Settings = this.ReadCommonSettings<Settings>("GeneralSettings", () => new Settings());
 
             // Declare a property available in the property list, this gets evaluated "on demand" (when shown or used in formulas)
             this.AttachDelegate("CurrentDateTime", () => DateTime.Now);
