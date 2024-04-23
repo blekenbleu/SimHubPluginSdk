@@ -25,7 +25,7 @@ namespace Sdk.Plugin
         /// <summary>
         /// Gets a short plugin title to show in left menu. Return null if you want to use the title as defined in PluginName attribute.
         /// </summary>
-        public string LeftMenuTitle => "Demo plugin";
+        public string LeftMenuTitle => "SDK plugin";
 
         /// <summary>
         /// Called one time per game data update, contains all normalized game data,
@@ -68,9 +68,10 @@ namespace Sdk.Plugin
         /// </summary>
         /// <param name="pluginManager"></param>
         /// <returns></returns>
+        Control View;
         public System.Windows.Controls.Control GetWPFSettingsControl(PluginManager pluginManager)
         {
-            return new Control(this);
+            return View = new Control(this);
         }
 
         /// <summary>

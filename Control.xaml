@@ -4,8 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:Sdk.Plugin"
-             xmlns:styles="clr-namespace:SimHub.Plugins.Styles;assembly=SimHub.Plugins" mc:Ignorable="d"
-             xmlns:ui="clr-namespace:SimHub.Plugins.UI;assembly=SimHub.Plugins" xmlns:converter="http://metro.mahapps.com/winfx/xaml/iconpacks">
+             xmlns:styles="clr-namespace:SimHub.Plugins.Styles;assembly=SimHub.Plugins"
+             mc:Ignorable="d"
+             xmlns:ui="clr-namespace:SimHub.Plugins.UI;assembly=SimHub.Plugins"
+             xmlns:converter="http://metro.mahapps.com/winfx/xaml/iconpacks">
     <ScrollViewer>
         <Grid>
             <Grid.ColumnDefinitions>
